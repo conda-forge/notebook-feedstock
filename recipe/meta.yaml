@@ -9,6 +9,7 @@ source:
   url: https://github.com/jupyter/notebook/archive/{{ version }}.tar.gz
   sha256: edb7ef8153e5ca781f21c7feb50b3316d515b0d8861ba0e45a00280166214a7f
 
+
 build:
   script: python setup.py install
   number: 0
@@ -30,7 +31,7 @@ requirements:
     - nbconvert
     - nbformat
     - python
-    - terminado        # [not win]
+    - terminado  # [not win]
     - tornado >=4
     - traitlets
 
@@ -38,13 +39,14 @@ test:
   commands:
     - jupyter-notebook -h
     - jupyter-nbextension -h
+    - jupyter-serverextension -h
   imports:
     - notebook
 
 about:
   home: http://jupyter.org
   license: BSD 3-clause
-  summary: a web-based notebook environment for interactive computing
+  summary: A web-based notebook environment for interactive computing
 
 extra:
   recipe-maintainers:
