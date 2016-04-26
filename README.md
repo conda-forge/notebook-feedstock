@@ -5,9 +5,9 @@ Home: http://jupyter.org
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
-Summary: a web-based notebook environment for interactive computing
+Summary: A web-based notebook environment for interactive computing
 
 
 
