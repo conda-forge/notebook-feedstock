@@ -44,7 +44,7 @@ test:
     - nose
     - coverage
     - nodejs
-    - phantomjs
+    - mock
   commands:
     - jupyter notebook -h
     - jupyter nbextension -h
