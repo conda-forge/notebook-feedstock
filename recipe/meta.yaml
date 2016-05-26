@@ -37,6 +37,14 @@ requirements:
     - traitlets
 
 test:
+  requires:
+    - nose
+    - setuptools
+    - wheel
+    - nose
+    - coverage
+    - nodejs
+    - phantomjs
   commands:
     - jupyter notebook -h
     - jupyter nbextension -h
