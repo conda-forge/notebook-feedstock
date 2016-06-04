@@ -22,6 +22,7 @@ requirements:
   build:
     - python
     - pip
+    - ipython_genutils  # [py2k]
   run:
     - ipykernel
     - ipython_genutils
