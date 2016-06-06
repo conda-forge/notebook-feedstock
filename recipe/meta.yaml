@@ -1,4 +1,4 @@
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: notebook
@@ -6,12 +6,12 @@ package:
 
 source:
   fn: notebook-{{ version }}.tar.gz
-  url: https://github.com/jupyter/notebook/archive/{{ version }}.tar.gz
-  sha256: edb7ef8153e5ca781f21c7feb50b3316d515b0d8861ba0e45a00280166214a7f
+  url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
+  sha256: a49de524dabb99f214bdf2a58f26c7892650251a23a3669c6492fb180492e197
 
 
 build:
-  script: python setup.py install
+  script: pip install --no-deps .
   number: 0
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
@@ -21,7 +21,8 @@ build:
 requirements:
   build:
     - python
-    - nodejs
+    - pip
+    - ipython_genutils  # [py2k]
   run:
     - ipykernel
     - ipython_genutils
@@ -37,9 +38,9 @@ requirements:
 
 test:
   commands:
-    - jupyter-notebook -h
-    - jupyter-nbextension -h
-    - jupyter-serverextension -h
+    - jupyter notebook -h
+    - jupyter nbextension -h
+    - jupyter serverextension -h
   imports:
     - notebook
 
