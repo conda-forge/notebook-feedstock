@@ -37,6 +37,8 @@ requirements:
     - traitlets
 
 test:
+  files:
+    - requirements.txt
   requires:
     - nose
     - setuptools
