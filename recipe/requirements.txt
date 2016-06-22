@@ -1,0 +1,2 @@
+codecov
+nose_warnings_filters
