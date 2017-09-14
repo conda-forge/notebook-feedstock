@@ -1,5 +1,5 @@
-{% set version = "5.0.0" %}
-{% set sha256 = "1cea3bbbd03c8e5842a1403347a8cc8134486b3ce081a2e5b1952a00ea66ed54" %}
+{% set version = "5.1.0" %}
+{% set sha256 = "c35fccb55250688303f6ef35c3870f6f5a8df885ff4d9e5cfe1176a87be7fdda" %}
 
 package:
   name: notebook
