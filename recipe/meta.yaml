@@ -1,5 +1,5 @@
-{% set version = "5.3.0" %}
-{% set sha256 = "493b46e2500db1783d26d57a83dbbcb953f9ddf7736adf820f86ab3f5e8fcef0" %}
+{% set version = "5.3.1" %}
+{% set sha256 = "380bbed63117accbb13e42d01d06153c72da6a386f75c81ae4c174eaa11e738b" %}
 
 package:
   name: notebook
@@ -11,9 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  script: 
-    # It's in the repository as a symlink (for 5.3), which doesn't work on Windows
-    - COPY /B notebook\static\base\images\favicon.ico notebook\static\favicon.ico  # [win]
+  script:
     - pip install --no-deps .
   number: 0
   entry_points:
