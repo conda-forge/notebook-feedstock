@@ -13,7 +13,7 @@ source:
 build:
   script: 
     # It's in the repository as a symlink (for 5.3), which doesn't work on Windows
-    - COPY /B notebook/static/base/images/favicon.ico notebook/static/favicon.ico  # [win]
+    - COPY /B notebook\static\base\images\favicon.ico notebook\static\favicon.ico  # [win]
     - pip install --no-deps .
   number: 0
   entry_points:
