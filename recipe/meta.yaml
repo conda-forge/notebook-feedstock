@@ -32,6 +32,7 @@ requirements:
     - nbconvert
     - nbformat
     - python
+    - send2trash
     - terminado  # [not win]
     - tornado >=4
     - traitlets >=4.3
