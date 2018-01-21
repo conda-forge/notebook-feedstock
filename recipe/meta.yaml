@@ -28,15 +28,15 @@ requirements:
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_core
-    - jupyter_client
+    - jupyter_core >=4.4.0
+    - jupyter_client >=5.2.0
     - nbconvert
     - nbformat
     - python
     - send2trash
-    - terminado  # [not win]
+    - terminado >=0.8.1 # [not win]
     - tornado >=4
-    - traitlets >=4.3
+    - traitlets >=4.2.1
 
 test:
   commands:
