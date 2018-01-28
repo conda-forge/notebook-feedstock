@@ -1,5 +1,5 @@
-{% set version = "5.3.1" %}
-{% set sha256 = "380bbed63117accbb13e42d01d06153c72da6a386f75c81ae4c174eaa11e738b" %}
+{% set version = "5.4.0" %}
+{% set sha256 = "dd431fad9bdd25aa9ff8265da096ef770475e21bf1d327982611a7de5cd904ca" %}
 
 package:
   name: notebook
@@ -13,7 +13,7 @@ source:
 build:
   script:
     - pip install --no-deps .
-  number: 1
+  number: 0
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
