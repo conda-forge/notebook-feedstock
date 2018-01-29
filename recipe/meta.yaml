@@ -13,7 +13,7 @@ source:
 build:
   script:
     - pip install --no-deps .
-  number: 1
+  number: 2
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
@@ -34,7 +34,7 @@ requirements:
     - nbformat
     - python
     - send2trash
-    - terminado >=0.8.1  # [not win]
+    - terminado >=0.8.1
     - tornado >=4
     - traitlets >=4.2.1
 
