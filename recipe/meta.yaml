@@ -11,9 +11,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   script:
     - pip install --no-deps .
-  number: 0
+  number: 1
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
@@ -21,7 +22,7 @@ build:
     - jupyter-bundlerextension = notebook.bundler.bundlerextensions:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
