@@ -38,6 +38,7 @@ requirements:
     - terminado >=0.8.1
     - tornado >=4
     - traitlets >=4.2.1
+    - prometheus_client
 
 test:
   commands:
