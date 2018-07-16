@@ -39,7 +39,7 @@ requirements:
     - tornado >=4
     - traitlets >=4.2.1
     - prometheus_client
-    - ipaddress # [py2k]
+    - ipaddress  # [py2k]
 
 test:
   commands:
