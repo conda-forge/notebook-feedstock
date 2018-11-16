@@ -9,7 +9,7 @@ source:
   sha256: 24f38c9cc7d7bd0a4c429cc8381e602e58b2b176d6071096a09a0e6c9cd0b463
 
 build:
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   number: 1000
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
