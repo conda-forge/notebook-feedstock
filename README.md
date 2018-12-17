@@ -1,6 +1,8 @@
 About notebook
 ==============
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: http://jupyter.org
 
 Package license: BSD 3-clause
@@ -104,3 +106,14 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@gnestor](https://github.com/gnestor/)
+* [@jakirkham](https://github.com/jakirkham/)
+* [@minrk](https://github.com/minrk/)
+* [@pelson](https://github.com/pelson/)
+* [@takluyver](https://github.com/takluyver/)
+
