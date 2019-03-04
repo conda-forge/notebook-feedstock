@@ -9,8 +9,8 @@ source:
   sha256: d908673a4010787625c8952e91a22adf737db031f2aa0793ad92f6558918a74a
 
 build:
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
-  number: 1000
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
@@ -33,7 +33,7 @@ requirements:
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.1
-    - tornado >=4
+    - tornado >=4,<6
     - traitlets >=4.2.1
     - prometheus_client
     - ipaddress  # [py2k]
