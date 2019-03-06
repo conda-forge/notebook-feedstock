@@ -1,4 +1,4 @@
-{% set version = "5.7.4" %}
+{% set version = "5.7.5" %}
 
 package:
   name: notebook
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: d908673a4010787625c8952e91a22adf737db031f2aa0793ad92f6558918a74a
+  sha256: c5011449a1a6d9f96bf65c4c2d6713802a21125476312b39c99010ccd7a2e2ed
 
 build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 1
+  number: 0
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
