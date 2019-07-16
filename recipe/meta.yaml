@@ -18,6 +18,7 @@ build:
     - jupyter-nbextension = notebook.nbextensions:main
     - jupyter-serverextension = notebook.serverextensions:main
     - jupyter-bundlerextension = notebook.bundler.bundlerextensions:main
+  skip: true  # [py2k]
 
 requirements:
   host:
@@ -28,17 +29,16 @@ requirements:
     - ipython_genutils
     - jinja2
     - jupyter_core >=4.4.0
-    - jupyter_client >=5.2.0
+    - jupyter_client >=5.3.1
     - nbconvert
     - nbformat
     - python
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.1
-    - tornado >=4.1,<7
+    - tornado >=5.0,<7
     - traitlets >=4.2.1
     - prometheus_client
-    - ipaddress  # [py2k]
 
 test:
   commands:
