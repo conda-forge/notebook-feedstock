@@ -1,4 +1,4 @@
-{% set version = "5.7.8" %}
+{% set version = "6.0.0" %}
 
 package:
   name: notebook
@@ -6,18 +6,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 573e0ae650c5d76b18b6e564ba6d21bf321d00847de1d215b418acb64f056eb8
+  sha256: 5c16dbf4fa824db19de43637ebfb24bcbd3b4f646e5d6a0414ed3a376d6bc951
 
 build:
   script:
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
-  number: 1
+  number: 0
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
     - jupyter-serverextension = notebook.serverextensions:main
     - jupyter-bundlerextension = notebook.bundler.bundlerextensions:main
+  skip: true  # [py2k]
 
 requirements:
   host:
@@ -28,17 +29,16 @@ requirements:
     - ipython_genutils
     - jinja2
     - jupyter_core >=4.4.0
-    - jupyter_client >=5.2.0
+    - jupyter_client >=5.3.1
     - nbconvert
     - nbformat
     - python
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.1
-    - tornado >=4.1,<7
+    - tornado >=5.0,<7
     - traitlets >=4.2.1
     - prometheus_client
-    - ipaddress  # [py2k]
 
 test:
   commands:
