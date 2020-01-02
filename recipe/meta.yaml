@@ -12,7 +12,7 @@ build:
   script:
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
-  number: 0
+  number: 1
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
@@ -28,8 +28,8 @@ requirements:
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.4.0
-    - jupyter_client >=5.3.1
+    - jupyter_core >=4.6.0
+    - jupyter_client >=5.3.4
     - nbconvert
     - nbformat
     - python
