@@ -44,7 +44,7 @@ test:
   requires:
     - pip
   commands:
-    - pip check
+    - python -m pip check
     - jupyter notebook -h
     - jupyter nbextension -h
     - jupyter serverextension -h
