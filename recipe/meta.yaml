@@ -41,7 +41,10 @@ requirements:
     - prometheus_client
 
 test:
+  requires:
+    - pip
   commands:
+    - pip check
     - jupyter notebook -h
     - jupyter nbextension -h
     - jupyter serverextension -h
