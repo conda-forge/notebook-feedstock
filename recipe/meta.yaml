@@ -1,4 +1,4 @@
-{% set version = "6.0.1" %}
+{% set version = "6.0.2" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 660976fe4fe45c7aa55e04bf4bccb9f9566749ff637e9020af3422f9921f9a5d
+  sha256: 399a4411e171170173344761e7fd4491a3625659881f76ce47c50231ed714d9b
 
 build:
   script:
@@ -28,8 +28,8 @@ requirements:
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.4.0
-    - jupyter_client >=5.3.1
+    - jupyter_core >=4.6.0
+    - jupyter_client >=5.3.4
     - nbconvert
     - nbformat
     - python
@@ -41,7 +41,10 @@ requirements:
     - prometheus_client
 
 test:
+  requires:
+    - pip
   commands:
+    - python -m pip check
     - jupyter notebook -h
     - jupyter nbextension -h
     - jupyter serverextension -h
@@ -50,10 +53,14 @@ test:
     - notebook
 
 about:
-  home: http://jupyter.org
-  license: BSD 3-clause
-  license_file: COPYING.md
+  home: https://jupyter.org
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
   summary: A web-based notebook environment for interactive computing
+  dev_url: https://github.com/jupyter/notebook
+  doc_url: https://jupyter-notebook.readthedocs.io
+  doc_source_url: https://github.com/jupyter/notebook/tree/master/docs
 
 extra:
   recipe-maintainers:
@@ -64,3 +71,4 @@ extra:
     - gnestor
     - takluyver
     - lresende
+    - bollwyvl
