@@ -28,7 +28,7 @@ requirements:
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.6.0
+    - jupyter_core >=4.6.1
     - jupyter_client >=5.3.4
     - nbconvert
     - nbformat
@@ -36,7 +36,7 @@ requirements:
     - pyzmq >=17
     - send2trash
     - terminado >=0.8.1
-    - tornado >=5.0,<7
+    - tornado >=5.0
     - traitlets >=4.2.1
     - prometheus_client
 
