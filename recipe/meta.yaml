@@ -1,4 +1,4 @@
-{% set version = "5.7.8" %}
+{% set version = "5.7.9" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 573e0ae650c5d76b18b6e564ba6d21bf321d00847de1d215b418acb64f056eb8
+  sha256: a6d8c5bed28cd0601a8798aaa3f704b6e84bc44ff54d7c2a48d6178d4d2f1e0b
 
 build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
@@ -27,7 +27,7 @@ requirements:
     - jinja2
     - jupyter_core >=4.4.0
     - jupyter_client >=5.2.0
-    - nbconvert
+    - nbconvert <6.0
     - nbformat
     - python
     - pyzmq >=17
