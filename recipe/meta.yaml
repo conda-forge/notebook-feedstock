@@ -1,4 +1,4 @@
-{% set version = "6.0.3" %}
+{% set version = "6.1.0rc1" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 47a9092975c9e7965ada00b9a20f0cf637d001db60d241d479f53c0be117ad48
+  sha256: 162747997b118ab302efb8e8e60e0c1fac4b9cdd74ebef5d9829294ed873de9a
 
 build:
   script:
@@ -35,7 +35,7 @@ requirements:
     - python
     - pyzmq >=17
     - send2trash
-    - terminado >=0.8.1
+    - terminado >=0.8.3
     - tornado >=5.0
     - traitlets >=4.2.1
     - prometheus_client
