@@ -1,4 +1,4 @@
-{% set version = "5.7.9" %}
+{% set version = "5.7.10" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: a6d8c5bed28cd0601a8798aaa3f704b6e84bc44ff54d7c2a48d6178d4d2f1e0b
+  sha256: b10107e1438e7a564292aa32510e610c88844cae03c882fe5286b891792b5c11
 
 build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
