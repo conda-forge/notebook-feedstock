@@ -1,4 +1,4 @@
-{% set version = "6.0.3" %}
+{% set version = "6.1.0" %}
 
 package:
   name: notebook
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 47a9092975c9e7965ada00b9a20f0cf637d001db60d241d479f53c0be117ad48
+  sha256: 0f44d22092896f68f7589bfdbfc912885993ddb1fd7d5779ddbbf0d8c6b73eef
 
 build:
   script:
-    - "{{ PYTHON }} -m pip install . --no-deps -vv"
+    - {{ PYTHON }} -m pip install . --no-deps -vv
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
-  number: 1
+  number: 0
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
