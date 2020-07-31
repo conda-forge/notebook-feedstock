@@ -39,6 +39,7 @@ requirements:
     - tornado >=5.0
     - traitlets >=4.2.1
     - prometheus_client
+    - argon2-cffi
 
 test:
   requires:
