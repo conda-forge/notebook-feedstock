@@ -52,6 +52,7 @@ test:
     - jupyter bundlerextension -h
   imports:
     - notebook
+    - notebook.tests.launchnotebook
 
 about:
   home: https://jupyter.org
