@@ -1,4 +1,4 @@
-{% set version = "6.1.0" %}
+{% set version = "6.1.1" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 0f44d22092896f68f7589bfdbfc912885993ddb1fd7d5779ddbbf0d8c6b73eef
+  sha256: 42391d8f3b88676e774316527599e49c11f3a7e51c41035e9e44c1b58e1398d5
 
 build:
   script:
@@ -44,6 +44,7 @@ requirements:
 test:
   requires:
     - pip
+    - requests
   commands:
     - python -m pip check
     - jupyter notebook -h
@@ -52,6 +53,7 @@ test:
     - jupyter bundlerextension -h
   imports:
     - notebook
+    - notebook.tests.launchnotebook
 
 about:
   home: https://jupyter.org
