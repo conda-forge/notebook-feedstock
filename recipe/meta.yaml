@@ -37,7 +37,7 @@ requirements:
     - python
     - pyzmq >=17
     - send2trash
-    - terminado >=0.8.4
+    - terminado >=0.8.3
     - tornado >=5.0
     - traitlets >=4.2.1
 
