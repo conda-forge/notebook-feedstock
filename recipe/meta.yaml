@@ -25,26 +25,27 @@ requirements:
     - python
     - pip
   run:
+    - argon2-cffi
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_core >=4.6.1
     - jupyter_client >=5.3.4
+    - jupyter_core >=4.6.1
     - nbconvert
     - nbformat
+    - prometheus_client
     - python
     - pyzmq >=17
     - send2trash
-    - terminado >=0.8.1
+    - terminado >=0.8.4
     - tornado >=5.0
     - traitlets >=4.2.1
-    - prometheus_client
-    - argon2-cffi
 
 test:
   requires:
     - pip
     - requests
+    - requests-unixsocket  # [unix]
   commands:
     - python -m pip check
     - jupyter notebook -h
