@@ -39,9 +39,9 @@ requirements:
     - prometheus_client
     - python
     - pyzmq >=17
-    - send2trash
+    - send2trash >=1.5.0
     - terminado >=0.8.3
-    - tornado >=5.0
+    - tornado >=6.1
     - traitlets >=4.2.1
 
 test:
