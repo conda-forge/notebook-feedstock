@@ -18,7 +18,7 @@ build:
     - jupyter-nbextension = notebook.nbextensions:main
     - jupyter-serverextension = notebook.serverextensions:main
     - jupyter-bundlerextension = notebook.bundler.bundlerextensions:main
-  skip: true  # [py2k]
+  skip: true  # [py<36]
 
 requirements:
   build:
