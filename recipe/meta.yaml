@@ -9,23 +9,23 @@ source:
   sha256: cbc9398d6c81473e9cdb891d2cae9c0d3718fca289dda6d26df5cb660fcadc7d
 
 build:
+  noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
-  number: 0
+  number: 1
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
     - jupyter-serverextension = notebook.serverextensions:main
     - jupyter-bundlerextension = notebook.bundler.bundlerextensions:main
-  skip: true  # [py<36]
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.7
     - pip
   run:
     - argon2-cffi
@@ -37,7 +37,7 @@ requirements:
     - nbconvert
     - nbformat
     - prometheus_client
-    - python
+    - python >=3.7
     - pyzmq >=17
     - send2trash >=1.5.0
     - terminado >=0.8.3
@@ -80,3 +80,4 @@ extra:
     - lresende
     - bollwyvl
     - blink1073
+    - davidbrochart
