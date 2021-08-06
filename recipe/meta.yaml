@@ -1,4 +1,4 @@
-{% set version = "5.7.10" %}
+{% set version = "5.7.11" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: b10107e1438e7a564292aa32510e610c88844cae03c882fe5286b891792b5c11
+  sha256: 71ec4d470c60d7251cd1244ea30d848dd0cb9a6da2630e4f2ce62b38d0a343f6
 
 build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
@@ -49,7 +49,7 @@ test:
 
 about:
   home: http://jupyter.org
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_file: COPYING.md
   summary: A web-based notebook environment for interactive computing
 
