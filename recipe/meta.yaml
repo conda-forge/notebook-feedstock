@@ -27,7 +27,7 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - jupyter_packaging >=0.9,<1
+    - jupyter-packaging >=0.9,<1
   run:
     - argon2-cffi
     - ipykernel
