@@ -3,7 +3,7 @@ About notebook
 
 Home: http://jupyter.org
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/notebook-feedstock/blob/master/LICENSE.txt)
 
