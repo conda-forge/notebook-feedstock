@@ -1,4 +1,4 @@
-{% set version = "6.4.8" %}
+{% set version = "6.4.9" %}
 
 package:
   name: notebook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 1e985c9dc6f678bdfffb9dc657306b5469bfa62d73e03f74e8defbf76d284312
+  sha256: 64d898f0efcec7def4607b686e25d175670f51c701966373b2c5d7b38281d522
 
 build:
   noarch: python
@@ -35,8 +35,8 @@ requirements:
     - jinja2
     - jupyter_client >=5.3.4
     - jupyter_core >=4.6.1
-    - nbconvert
-    - nbformat
+    - nbconvert >=5
+    - nbformat 
     - prometheus_client
     - python >=3.7
     - pyzmq >=17
