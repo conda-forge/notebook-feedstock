@@ -35,6 +35,7 @@ requirements:
     - jinja2
     - jupyter_client >=5.3.4
     - jupyter_core >=4.6.1
+    - nbclassic ==0.4.5
     - nbconvert >=5
     - nbformat
     - prometheus_client
