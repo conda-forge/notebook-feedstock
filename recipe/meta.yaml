@@ -25,9 +25,10 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
+    - jupyter-packaging >=0.9,<1
+    - nbclassic >=0.4.0
     - python >=3.7
     - pip
-    - jupyter-packaging >=0.9,<1
   run:
     - argon2-cffi
     - ipykernel
