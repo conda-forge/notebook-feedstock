@@ -1,4 +1,5 @@
-{% set version = "6.5.1" %}
+{% set version = "6.5.2" %}
+{% set min_nbclassic = "0.4.7" %}
 
 package:
   name: notebook
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: f69fd3b13df092af3a66c8797fa8ce00608db71cade89105ac4178b8d8d154aa
+  sha256: c1897e5317e225fc78b45549a6ab4b668e4c996fd03a04e938fe5e7af2bfffd0
 
 build:
   noarch: python
@@ -26,7 +27,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - jupyter-packaging >=0.9,<1
-    - nbclassic >=0.4.0
+    - nbclassic >={{ min_nbclassic }}
     - python >=3.7
     - pip
   run:
@@ -36,13 +37,14 @@ requirements:
     - jinja2
     - jupyter_client >=5.3.4
     - jupyter_core >=4.6.1
-    - nbclassic ==0.4.5
+    - nbclassic >={{ min_nbclassic }}
     - nbconvert >=5
     - nbformat
+    - nest-asyncio >=1.5
     - prometheus_client
     - python >=3.7
     - pyzmq >=17
-    - send2trash >=1.5.0
+    - send2trash >=1.8.0
     - terminado >=0.8.3
     - tornado >=6.1
     - traitlets >=4.2.1
@@ -52,6 +54,7 @@ test:
     - pip
     - requests
     - requests-unixsocket  # [unix]
+    - nbclassic =={{ min_nbclassic }}
   commands:
     - python -m pip check
     - jupyter notebook -h
