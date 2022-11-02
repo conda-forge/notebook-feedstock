@@ -40,10 +40,11 @@ requirements:
     - nbclassic >={{ min_nbclassic }}
     - nbconvert >=5
     - nbformat
+    - nest-asyncio >=1.5
     - prometheus_client
     - python >=3.7
     - pyzmq >=17
-    - send2trash >=1.5.0
+    - send2trash >=1.8.0
     - terminado >=0.8.3
     - tornado >=6.1
     - traitlets >=4.2.1
