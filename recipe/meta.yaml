@@ -14,7 +14,7 @@ build:
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
-  number: 0
+  number: 1
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
@@ -38,7 +38,7 @@ requirements:
     - jupyter_client >=5.3.4
     - jupyter_core >=4.6.1
     - nbclassic >={{ min_nbclassic }}
-    - nbconvert >=5
+    - nbconvert-core >=5
     - nbformat
     - nest-asyncio >=1.5
     - prometheus_client
