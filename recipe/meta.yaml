@@ -1,4 +1,4 @@
-{% set version = "6.5.2" %}
+{% set version = "6.5.3" %}
 {% set min_nbclassic = "0.4.7" %}
 
 package:
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: c1897e5317e225fc78b45549a6ab4b668e4c996fd03a04e938fe5e7af2bfffd0
+  sha256: b12bee3292211d85dd7e588a790ddce30cb3e8fbcfa1e803522a207f60819e05
 
 build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
     - find {{ PREFIX }} -name '*.js.map' -delete  # [not win]
-  number: 1
+  number: 0
   entry_points:
     - jupyter-notebook = notebook.notebookapp:main
     - jupyter-nbextension = notebook.nbextensions:main
