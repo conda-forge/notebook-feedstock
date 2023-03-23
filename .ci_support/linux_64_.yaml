@@ -1,10 +1,8 @@
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge
+- conda-forge/label/jupyterlab_alpha,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge notebook_alpha
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
-target_platform:
-- linux-64
