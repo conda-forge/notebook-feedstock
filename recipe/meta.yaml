@@ -35,8 +35,9 @@ test:
   requires:
     - pip
   commands:
-    - python -m pip check
+    - pip check
     - jupyter notebook -h
+    - jupyter-notebook -h
   imports:
     - notebook
 
