@@ -18,6 +18,7 @@ build:
 
 requirements:
   host:
+    - hatch-jupyter-builder >=0.2
     - hatchling >=1.11
     - jupyterlab >=4.0.0a37,<5
     - pip
