@@ -1,4 +1,4 @@
-{% set version = "7.0.0b0" %}
+{% set version = "7.0.0b2" %}
 {% set lab_version = ">=4.0.0b0,<5" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: efb6e3fd91ad20636c615430ddebf4fc3bd56904419bc88f439732945641b2e8
+  sha256: d79f4c1f07f3a23ea46f09621c1370fb8c12d96606a3b791b1ff27df01490bc8
 
 build:
   noarch: python
@@ -51,7 +51,7 @@ about:
   home: https://github.com/jupyter/notebook
   license: BSD-3-Clause
   license_family: BSD
-  license_file: 
+  license_file:
     - LICENSE
     - notebook/labextension/static/third-party-licenses.json
     # TODO: upstream issue
