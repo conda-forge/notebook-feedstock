@@ -3,13 +3,11 @@ About notebook-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/notebook-feedstock/blob/main/LICENSE.txt)
 
-Home: https://jupyter.org
+Home: https://github.com/jupyter/notebook
 
 Package license: BSD-3-Clause
 
 Summary: A web-based notebook environment for interactive computing
-
-Development: https://github.com/jupyter/notebook
 
 Documentation: https://jupyter-notebook.readthedocs.io
 
