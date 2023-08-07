@@ -35,7 +35,7 @@ requirements:
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_client >=5.3.4
+    - jupyter_client >=5.3.4,<8
     - jupyter_core >=4.6.1
     - nbclassic >={{ min_nbclassic }}
     - nbconvert-core >=5
@@ -43,7 +43,7 @@ requirements:
     - nest-asyncio >=1.5
     - prometheus_client
     - python >=3.7
-    - pyzmq >=17
+    - pyzmq >=17,<25
     - send2trash >=1.8.0
     - terminado >=0.8.3
     - tornado >=6.1
