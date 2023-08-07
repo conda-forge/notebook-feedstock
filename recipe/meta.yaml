@@ -1,4 +1,4 @@
-{% set version = "6.5.4" %}
+{% set version = "6.5.5" %}
 {% set min_nbclassic = "0.4.7" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 517209568bd47261e2def27a140e97d49070602eea0d226a696f42a7f16c9a4e
+  sha256: 457caa1fa1c647395420945b2b7559f603eedbc9aeb2a59a0c286c8029e31efa
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ requirements:
     - ipykernel
     - ipython_genutils
     - jinja2
-    - jupyter_client >=5.3.4
+    - jupyter_client >=5.3.4,<8
     - jupyter_core >=4.6.1
     - nbclassic >={{ min_nbclassic }}
     - nbconvert-core >=5
@@ -43,7 +43,7 @@ requirements:
     - nest-asyncio >=1.5
     - prometheus_client
     - python >=3.7
-    - pyzmq >=17
+    - pyzmq >=17,<25
     - send2trash >=1.8.0
     - terminado >=0.8.3
     - tornado >=6.1
