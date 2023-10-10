@@ -46,6 +46,12 @@ test:
   imports:
     - notebook
 
+app:
+  entry: jupyter notebook
+  icon: icon.png
+  summary: Jupyter Notebook {{ version }}
+  type: desk
+
 about:
   home: https://github.com/jupyter/notebook
   license: BSD-3-Clause
