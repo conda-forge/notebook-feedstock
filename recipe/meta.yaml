@@ -1,6 +1,5 @@
-{% set lab_version = ">=4.0.2,<5" %}
 {% set version = "7.0.5" %}
-{% set lab_version = ">=4.0.2,<5" %}
+{% set lab_version = ">=4.0.7,<5" %}
 
 package:
   name: notebook
