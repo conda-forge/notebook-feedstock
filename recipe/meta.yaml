@@ -13,7 +13,7 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
-  number: 0
+  number: 1
   entry_points:
     - jupyter-notebook = notebook.app:main
 
@@ -45,6 +45,12 @@ test:
     - grep -iE "@jupyter-notebook/lab-extension.*OK" labextensions
   imports:
     - notebook
+
+app:
+  entry: jupyter notebook
+  icon: icon.png
+  summary: Jupyter Notebook {{ version }}
+  type: desk
 
 about:
   home: https://github.com/jupyter/notebook
