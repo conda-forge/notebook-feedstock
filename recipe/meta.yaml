@@ -1,4 +1,4 @@
-{% set version = "7.1.0a0" %}
+{% set version = "7.1.0a1" %}
 {% set lab_version = ">=4.1.0a4,<5" %}
 
 package:
