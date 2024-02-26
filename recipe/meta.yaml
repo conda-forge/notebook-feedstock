@@ -1,4 +1,4 @@
-{% set version = "7.1.0" %}
+{% set version = "7.1.1" %}
 {% set lab_version = ">=4.1.1,<4.2.0" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 99caf01ff166b1cc86355c9b37c1ba9bf566c1d7fc4ab57bb6f8f24e36c4260e
+  sha256: 818e7420fa21f402e726afb9f02df7f3c10f294c02e383ed19852866c316108b
 
 build:
   noarch: python
