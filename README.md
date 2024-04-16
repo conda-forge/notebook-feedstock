@@ -34,14 +34,14 @@ Current release info
 Installing notebook
 ===================
 
-Installing `notebook` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `notebook` from the `conda-forge/label/notebook_beta` channel can be achieved by adding `conda-forge/label/notebook_beta` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/notebook_beta
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `notebook` can be installed with `conda`:
+Once the `conda-forge/label/notebook_beta` channel has been enabled, `notebook` can be installed with `conda`:
 
 ```
 conda install notebook
@@ -56,26 +56,26 @@ mamba install notebook
 It is possible to list all of the versions of `notebook` available on your platform with `conda`:
 
 ```
-conda search notebook --channel conda-forge
+conda search notebook --channel conda-forge/label/notebook_beta
 ```
 
 or with `mamba`:
 
 ```
-mamba search notebook --channel conda-forge
+mamba search notebook --channel conda-forge/label/notebook_beta
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search notebook --channel conda-forge
+mamba repoquery search notebook --channel conda-forge/label/notebook_beta
 
 # List packages depending on `notebook`:
-mamba repoquery whoneeds notebook --channel conda-forge
+mamba repoquery whoneeds notebook --channel conda-forge/label/notebook_beta
 
 # List dependencies of `notebook`:
-mamba repoquery depends notebook --channel conda-forge
+mamba repoquery depends notebook --channel conda-forge/label/notebook_beta
 ```
 
 
@@ -97,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
