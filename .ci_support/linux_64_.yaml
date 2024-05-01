@@ -1,7 +1,7 @@
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge
+- conda-forge/label/jupyterlab_rc,conda-forge
 channel_targets:
 - conda-forge notebook_rc
 docker_image:
