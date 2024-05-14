@@ -1,5 +1,5 @@
-{% set version = "7.2.0rc0" %}
-{% set lab_version = ">=4.2.0rc0,<4.3" %}
+{% set version = "7.2.0rc1" %}
+{% set lab_version = ">=4.2.0,<4.3" %}
 
 package:
   name: notebook
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 782f548e8f509a8d0d16e50dae6e2238a852d51b77d0c9e4f3af08580f54cf42
+  sha256: 87163c9600fab5524d9a59929bf05247e83dae726a1d6d071a109cd6f2287849
 
 build:
   noarch: python
@@ -19,13 +19,12 @@ build:
 
 requirements:
   host:
-    - hatch-jupyter-builder >=0.2
+    - hatch-jupyter-builder >=0.5
     - hatchling >=1.11
     - jupyterlab {{ lab_version }}
     - pip
     - python >=3.8
   run:
-    - importlib_resources >=5.0
     - jupyter_server >=2.4.0,<3
     - jupyterlab {{ lab_version }}
     - jupyterlab_server >=2.27.1,<3
