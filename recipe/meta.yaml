@@ -1,4 +1,4 @@
-{% set version = "6.5.6" %}
+{% set version = "6.5.7" %}
 {% set min_nbclassic = "0.4.7" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: b4625a4b7a597839dd3156b140d5ba2c7123761f98245a3290f67a8b8ee048d9
+  sha256: 04eb9011dfac634fbd4442adaf0a8c27cd26beef831fe1d19faf930c327768e4
 
 build:
   noarch: python
@@ -43,7 +43,7 @@ requirements:
     - nest-asyncio >=1.5
     - prometheus_client
     - python >=3.7
-    - pyzmq >=17,<25
+    - pyzmq >=17
     - send2trash >=1.8.0
     - terminado >=0.8.3
     - tornado >=6.1
