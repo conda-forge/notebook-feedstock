@@ -53,6 +53,7 @@ about:
   license_file:
     - LICENSE
     - notebook/labextension/static/third-party-licenses.json
+    - notebook/static/third-party-licenses.json
   summary: A web-based notebook environment for interactive computing
   doc_url: https://jupyter-notebook.readthedocs.io
   doc_source_url: https://github.com/jupyter/notebook/tree/v{{ version }}/docs
