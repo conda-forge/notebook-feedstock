@@ -1,5 +1,4 @@
 {% set lab_version = ">=4.2.0,<4.3" %}
-{% set lab_version = ">=4.2.0,<4.3" %}
 {% set version = "7.2.2" %}
 {% set lab_version = ">=4.2.0,<4.3" %}
 
