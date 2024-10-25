@@ -1,5 +1,7 @@
 {% set version = "7.3.0b1" %}
-{% set lab_version = ">=4.3.0rc1,<4.4" %}
+
+# the `if` avoids bot duplications
+{% if 1 %}{% set lab_version = ">=4.3.0rc1,<4.4" %}{% endif %}
 
 package:
   name: notebook
@@ -10,10 +12,9 @@ source:
   sha256: 8fb0f19929aca6434cdd1d2c1518705a3b83b6b9ce195b7cf575c57e6b6d6284
 
 build:
-  noarch: python
-  script:
-    - {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
   entry_points:
     - jupyter-notebook = notebook.app:main
 
