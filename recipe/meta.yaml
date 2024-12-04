@@ -65,6 +65,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - krassowski
     - SylvainCorlay
     - jakirkham
     - minrk
