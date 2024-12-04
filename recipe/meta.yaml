@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 3219689a8ad4cc23b1d7283ea7816618e54009ff7e557b21a113a51118836d1f
+  sha256: e1dc37db32620b04043ae78866a40b087c43308d85067699db99e6f9e22846bc
 
 build:
   number: 0
