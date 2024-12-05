@@ -1,4 +1,4 @@
-{% set version = "7.3.0" %}
+{% set version = "7.3.1" %}
 
 {% set python_min = python_min | default("3.9") %}
 
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: e1dc37db32620b04043ae78866a40b087c43308d85067699db99e6f9e22846bc
+  sha256: 84381c2a82d867517fd25b86e986dae1fe113a70b98f03edff9b94e499fec8fa
 
 build:
   number: 0
