@@ -3,7 +3,7 @@
 {% set python_min = python_min | default("3.9") %}
 
 # the `if` avoids bot duplications
-{% if 1 %}{% set lab_version = ">=4.3.2,<4.4" %}{% endif %}
+{% if 1 %}{% set lab_version = ">=4.3.4,<4.4" %}{% endif %}
 
 package:
   name: notebook
@@ -16,7 +16,8 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
+  script:
+    - {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
   entry_points:
     - jupyter-notebook = notebook.app:main
 
@@ -38,8 +39,8 @@ requirements:
 
 test:
   requires:
-    - pip
     - m2-grep  # [win]
+    - pip
     - python {{ python_min }}
   imports:
     - notebook
