@@ -152,6 +152,7 @@ Feedstock Maintainers
 * [@gnestor](https://github.com/gnestor/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@jtpio](https://github.com/jtpio/)
+* [@krassowski](https://github.com/krassowski/)
 * [@lresende](https://github.com/lresende/)
 * [@minrk](https://github.com/minrk/)
 * [@pelson](https://github.com/pelson/)
