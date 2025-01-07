@@ -1,9 +1,7 @@
-{% set version = "7.4.0a0" %}
-
-{% set python_min = python_min | default("3.9") %}
+{% set version = "7.4.0a1" %}
 
 # the `if` avoids bot duplications
-{% if 1 %}{% set lab_version = ">=4.4.0a1,<4.5" %}{% endif %}
+{% if 1 %}{% set lab_version = ">=4.4.0a2,<4.5" %}{% endif %}
 
 package:
   name: notebook
@@ -11,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 256f55f3ecf4a5ba20b7f975f664b00206428d7122aaa5f3ad6038454dc0b445
+  sha256: 4ee6e5651c9d1fae39254ff97ad1a7630c785b60da30af6b2a5c0e05aa7305a4
 
 build:
   number: 0
