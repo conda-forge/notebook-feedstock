@@ -1,4 +1,4 @@
 channel_targets:
   - conda-forge notebook_beta
 channel_sources:
-  - conda-forge
+  - conda-forge/label/jupyterlab_beta,conda-forge
