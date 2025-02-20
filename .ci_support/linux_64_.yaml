@@ -1,7 +1,7 @@
 cdt_name:
 - conda
 channel_sources:
-- conda-forge
+- conda-forge/label/jupyterlab_beta,conda-forge
 channel_targets:
 - conda-forge notebook_beta
 docker_image:
