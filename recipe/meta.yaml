@@ -1,7 +1,7 @@
 {% set version = "7.4.0" %}
 
 # the `if` avoids bot duplications
-{% if 1 %}{% set lab_version = ">=4.3.6,<4.4" %}{% endif %}
+{% if 1 %}{% set lab_version = ">=4.4.0,<4.5" %}{% endif %}
 
 package:
   name: notebook
@@ -27,7 +27,6 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - importlib_resources >=5.0
     - jupyter_server >=2.4.0,<3
     - jupyterlab {{ lab_version }}
     - jupyterlab_server >=2.27.1,<3
