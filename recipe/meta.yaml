@@ -1,7 +1,7 @@
 {% set version = "7.4.2" %}
 
 # the `if` avoids bot duplications
-{% if 1 %}{% set lab_version = ">=4.4.1,<4.5" %}{% endif %}
+{% if 1 %}{% set lab_version = ">=4.4.2,<4.5" %}{% endif %}
 
 package:
   name: notebook
