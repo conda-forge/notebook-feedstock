@@ -54,8 +54,11 @@ tests:
       - jupyter-notebook -h
       - jupyter labextension list --debug
       - >-
-        jupyter labextension list --debug 2>&1 
-        | python -c "import sys, re; assert re.match(r'@jupyter-notebook/lab-extension.*OK', sys.stdin.read()), 'ext not ok'"
+        jupyter labextension list --debug 2>&1 | python -c 
+        "import sys, re;
+        ok = re.findall(r'@jupyter-notebook/lab-extension.*enabled.*OK', sys.stdin.read());
+        print(ok);
+        assert ok, 'lab extension is not ok'"
 
 about:
   license: BSD-3-Clause
