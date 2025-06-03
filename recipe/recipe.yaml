@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   version: 7.5.0a0
-  lab_version: ">=4.5.0a0,<4.5"
+  lab_version: ">=4.5.0a0,<4.6"
 
 package:
   name: notebook
