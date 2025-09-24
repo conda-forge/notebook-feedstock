@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: 7.5.0a2
-  lab_version: ">=4.5.0a3,<4.6"
+  version: 7.5.0a3
+  lab_version: ">=4.5.0a4,<4.6"
 
 package:
   name: notebook
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
-  sha256: 078b15b420c8ca801f2eabce89b20f7ae622b42ca6f2e5e1314d25bb51d11854
+  sha256: 91176d2b21bf5c52a1e286e5beb0d3fe46331f15ef935db8d0c889d411859bf1
 
 build:
   number: 0
