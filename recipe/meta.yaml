@@ -1,7 +1,7 @@
 {% set version = "7.4.6" %}
 
 # the `if` avoids bot duplications
-{% if 1 %}{% set lab_version = ">=4.4.5,<4.5" %}{% endif %}
+{% if 1 %}{% set lab_version = ">=4.4.8,<4.5" %}{% endif %}
 
 package:
   name: notebook
@@ -23,6 +23,7 @@ requirements:
   host:
     - hatch-jupyter-builder >=0.5
     - hatchling >=1.11
+    - httpx >=0.25.0,<1.0.dev1
     - jupyterlab {{ lab_version }}
     - pip
     - python {{ python_min }}
@@ -36,7 +37,6 @@ requirements:
 
 test:
   requires:
-    - m2-grep  # [win]
     - pip
     - python {{ python_min }}
   imports:
@@ -46,8 +46,9 @@ test:
     - jupyter notebook -h
     - jupyter-notebook -h
     - jupyter labextension list
-    - jupyter labextension list 1>labextensions 2>&1
-    - grep -iE "@jupyter-notebook/lab-extension.*OK" labextensions
+    - >
+      jupyter labextension list 2>&1 
+      | python -c "import sys, re; assert re.search('@jupyter-notebook/lab-extension.*OK', sys.stdin.read())"
 
 about:
   home: https://github.com/jupyter/notebook
