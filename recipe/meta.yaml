@@ -1,8 +1,8 @@
-{% set version = "7.4.6" %}
+{% set version = "7.4.7" %}
 
 # the `if` avoids bot duplications
 {% if 1 %}
-  {% set jupyterlab_min = "4.4.8" %}
+  {% set jupyterlab_min = "4.4.9" %}
   {% set jupyterlab_max = "4.5" %}
 {% endif %}
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-{{ version }}.tar.gz
-  sha256: 5135e79e3cf5187e987fc8385dc0d087d792757060268686016307a4d7e70af0
+  sha256: 3f0a04027dfcee8a876de48fba13ab77ec8c12f72f848a222ed7f5081b9e342a
 
 build:
   number: 0
@@ -51,8 +51,7 @@ test:
     - jupyter-notebook -h
     - jupyter labextension list --debug
     - >
-      jupyter labextension list --debug 2>&1 
-      | python -c "import sys, re; assert re.search('@jupyter-notebook/lab-extension.*OK', sys.stdin.read())"
+      jupyter labextension list --debug 2>&1  | python -c "import sys, re; assert re.search('@jupyter-notebook/lab-extension.*OK', sys.stdin.read())"
 
 about:
   home: https://github.com/jupyter/notebook
