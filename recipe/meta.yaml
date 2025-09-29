@@ -2,7 +2,7 @@
 
 # the `if` avoids bot duplications
 {% if 1 %}
-  {% set jupyterlab_min = "4.4.8" %}
+  {% set jupyterlab_min = "4.4.9" %}
   {% set jupyterlab_max = "4.5" %}
 {% endif %}
 
