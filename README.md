@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: A web-based notebook environment for interactive computing
 
-Documentation: https://jupyter-notebook.readthedocs.io
+Documentation: https://jupyter-notebook.readthedocs.io/
 
 Current build status
 ====================
@@ -151,6 +151,8 @@ Feedstock Maintainers
 * [@davidbrochart](https://github.com/davidbrochart/)
 * [@gnestor](https://github.com/gnestor/)
 * [@jakirkham](https://github.com/jakirkham/)
+* [@jtpio](https://github.com/jtpio/)
+* [@krassowski](https://github.com/krassowski/)
 * [@lresende](https://github.com/lresende/)
 * [@minrk](https://github.com/minrk/)
 * [@pelson](https://github.com/pelson/)
