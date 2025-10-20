@@ -1,5 +1,3 @@
-cdt_name:
-- conda
 channel_sources:
 - conda-forge/label/jupyterlab_beta,conda-forge
 channel_targets:
