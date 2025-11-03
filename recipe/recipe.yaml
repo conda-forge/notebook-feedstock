@@ -5,6 +5,7 @@ context:
   version: "7.5.0rc0"
   jupyterlab_min: "4.5.0rc0"
   jupyterlab_max: "4.6"
+  python_check_max: "3.14"
 
 package:
   name: notebook
@@ -45,7 +46,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
   - requirements:
       run:
         - python ${{ python_min }}.*
