@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: "7.5.0"
+  jupyterlab_min: "4.5.0"
+  jupyterlab_max: "4.6"
+  python_check_max: "3.14"
+
+package:
+  name: notebook
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
+  sha256: 3b27eaf9913033c28dde92d02139414c608992e1df4b969c843219acf2ff95e4
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - jupyter-notebook = notebook.app:main
+
+requirements:
+  host:
+    - hatch-jupyter-builder >=0.5
+    - hatchling >=1.11
+    - jupyterlab ${{ jupyterlab_min }}.*
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - importlib_resources >=5.0
+    - jupyter_server >=2.4.0,<3
+    - jupyterlab >=${{ jupyterlab_min }},<${{ jupyterlab_max }}
+    - jupyterlab_server >=2.28.0,<3
+    - notebook-shim >=0.2,<0.3
+    - python >=${{ python_min }}
+    - tornado >=6.2.0
+
+tests:
+  - python:
+      imports: notebook
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - jupyterlab ${{ jupyterlab_min }}.*
+    script:
+      - pip check
+      - jupyter notebook -h
+      - jupyter-notebook -h
+      - jupyter labextension list --debug
+      - jupyter labextension list --debug 2>&1 | python -c "import sys, re; ok = re.findall(r'@jupyter-notebook/lab-extension.*enabled.*OK', sys.stdin.read()); print(ok); assert ok, 'lab extension is not ok'"
+
+about:
+  license: BSD-3-Clause
+  license_file:
+    - LICENSE
+    - notebook/labextension/static/third-party-licenses.json
+    - notebook/static/third-party-licenses.json
+  summary: A web-based notebook environment for interactive computing
+  homepage: https://github.com/jupyter/notebook
+  documentation: https://jupyter-notebook.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - krassowski
+    - SylvainCorlay
+    - jakirkham
+    - minrk
+    - pelson
+    - gnestor
+    - takluyver
+    - lresende
+    - bollwyvl
+    - blink1073
+    - davidbrochart
+    - jtpio
