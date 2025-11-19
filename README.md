@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: A web-based notebook environment for interactive computing
 
-Documentation: https://jupyter-notebook.readthedocs.io
+Documentation: https://jupyter-notebook.readthedocs.io/
 
 Current build status
 ====================
