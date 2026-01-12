@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: "7.5.1"
-  jupyterlab_min: "4.5.1"
+  version: "7.5.2"
+  jupyterlab_min: "4.5.2"
   jupyterlab_max: "4.6"
   python_check_max: "3.14"
 
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
-  sha256: b2fb4cef4d47d08c33aecce1c6c6e84be05436fbd791f88fce8df9fbca088b75
+  sha256: 83e82f93c199ca730313bea1bb24bc279ea96f74816d038a92d26b6b9d5f3e4a
 
 build:
   number: 0
