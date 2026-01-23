@@ -49,8 +49,9 @@ tests:
         - ${{ python_check_max }}.*
   - requirements:
       run:
-        - python ${{ python_min }}.*
         - jupyterlab ${{ jupyterlab_min }}.*
+        - pip
+        - python ${{ python_min }}.*
     script:
       - pip check
       - jupyter notebook -h
