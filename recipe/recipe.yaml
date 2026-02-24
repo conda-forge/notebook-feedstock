@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: "7.6.0a2"
-  jupyterlab_min: "4.6.0a2"
+  version: "7.6.0a3"
+  jupyterlab_min: "4.6.0a3"
   jupyterlab_max: "4.7"
   python_check_max: "3.14"
 
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
-  sha256: 1e86394e9ab75e6bb4441f31f453dcc415ecd7b8df5fafd8ea4500ae4c9d7ea2
+  sha256: de91e70ca2cf8ed7131acb527e6743efd9bae5aabe5bfb53e76a7a0a2da633c4
 
 build:
   number: 0
@@ -66,7 +66,8 @@ about:
     - notebook/labextension/static/third-party-licenses.json
     - notebook/static/third-party-licenses.json
   summary: A web-based notebook environment for interactive computing
-  homepage: https://github.com/jupyter/notebook
+  homepage: https://pypi.org/project/notebook
+  repository: https://github.com/jupyter/notebook
   documentation: https://jupyter-notebook.readthedocs.io
 
 extra:
