@@ -2,9 +2,11 @@
 schema_version: 1
 
 context:
-  version: "7.6.0a3"
-  jupyterlab_min: "4.6.0a3"
+  version: "7.6.0a5"
+  jupyterlab_min: "4.6.0a5"
   jupyterlab_max: "4.7"
+  jupyter_builder_min: 0.0.8
+  jupyter_builder_max: 0.1.0a0
   python_check_max: "3.14"
 
 package:
@@ -13,7 +15,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
-  sha256: de91e70ca2cf8ed7131acb527e6743efd9bae5aabe5bfb53e76a7a0a2da633c4
+  sha256: 2fa1a2d4f120af70797b77158f946f77f95a605ec8017c60ed76f0979b446c46
 
 build:
   number: 0
@@ -28,12 +30,13 @@ requirements:
   host:
     - hatch-jupyter-builder >=0.5
     - hatchling >=1.11
-    - jupyterlab ${{ jupyterlab_min }}.*
+    - jupyter-builder >=${{ jupyter_builder_min }},<${{ jupyter_builder_max }}
     - pip
     - python ${{ python_min }}.*
   run:
     - importlib_resources >=5.0
     - jupyter_server >=2.4.0,<3
+    - jupyter-builder >=${{ jupyter_builder_min }},<${{ jupyter_builder_max }}
     - jupyterlab >=${{ jupyterlab_min }},<${{ jupyterlab_max }}
     - jupyterlab_server >=2.28.0,<3
     - notebook-shim >=0.2,<0.3
