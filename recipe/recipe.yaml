@@ -42,6 +42,8 @@ requirements:
     - notebook-shim >=0.2,<0.3
     - python >=${{ python_min }}
     - tornado >=6.2.0
+  run_constraints:
+    - jupyter-builder >=0.8.0 *_1
 
 tests:
   - python:
@@ -52,6 +54,7 @@ tests:
         - ${{ python_check_max }}.*
   - requirements:
       run:
+        - jupyter-builder ${{ jupyter_builder_min }}.*
         - jupyterlab ${{ jupyterlab_min }}.*
         - pip
         - python ${{ python_min }}.*
