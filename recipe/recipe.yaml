@@ -5,8 +5,8 @@ context:
   version: "7.6.0b0"
   jupyterlab_min: "4.6.0b0"
   jupyterlab_max: "4.7"
-  jupyter_builder_min: 1.0.0b1
-  jupyter_builder_max: <2
+  jupyter_builder_min: "1.0.0b1"
+  jupyter_builder_max: "2"
   python_check_max: "3.14"
 
 package:
@@ -41,8 +41,6 @@ requirements:
     - notebook-shim >=0.2,<0.3
     - python >=${{ python_min }}
     - tornado >=6.2.0
-  run_constraints:
-    - jupyter-builder >=0.0.8 *_1
 
 tests:
   - python:
