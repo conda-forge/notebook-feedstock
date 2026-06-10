@@ -3,11 +3,13 @@ About notebook-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/notebook-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyter/notebook
+Home: https://pypi.org/project/notebook
 
 Package license: BSD-3-Clause
 
 Summary: A web-based notebook environment for interactive computing
+
+Development: https://github.com/jupyter/notebook
 
 Documentation: https://jupyter-notebook.readthedocs.io/
 
@@ -15,10 +17,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=694&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/notebook-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/notebook-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/notebook-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
