@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
-  sha256: 1e79f8a46b97fe27946fa7b3149bb0369622bcee687e2c753717c6ccecfae7d1
+  sha256: 07e3b2c770d965f7a820bcc18cd3c2753a5e79298785547db41a75690401bec0
 
 build:
   number: 0
