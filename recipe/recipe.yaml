@@ -47,6 +47,8 @@ tests:
       strict: true
       files:
         - etc/jupyter/jupyter_server_config.d/**
+        - share/applications/jupyter-notebook.desktop
+        - share/icons/hicolor/scalable/apps/notebook.svg
         - share/jupyter/lab/schemas/@jupyter-notebook/**
         - share/jupyter/labextensions/@jupyter-notebook/lab-extension/**
       site_packages:
