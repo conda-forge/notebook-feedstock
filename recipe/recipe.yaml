@@ -2,26 +2,26 @@
 schema_version: 1
 
 context:
-  version: "7.6.0b1"
-  jupyterlab_min: "4.6.0b1"
-  jupyterlab_max: "4.7"
-  jupyter_builder_min: "1.0.0b1"
+  version: "7.7.0b0"
+  jupyterlab_min: "4.7.0b0"
+  jupyterlab_max: "4.8"
+  jupyter_builder_min: "1.1.1"
   jupyter_builder_max: "2"
-  python_check_max: "3.14"
+  python_check_max: "3.15"
 
 package:
   name: notebook
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
-  sha256: 8866a8f4493e9bc998881d7fb8abae7926fb625d3f9ec6e22b2388e8418cc74e
+  url: https://files.pythonhosted.org/packages/source/n/notebook/notebook-${{ version }}.tar.gz
+  sha256: 070048cf5cba25f7132c5fa7958a0fec99855aa83a7e432ffef86eaa06eb60c0
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check --check-build-dependencies
   python:
     entry_points:
       - jupyter-notebook = notebook.app:main
@@ -34,7 +34,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - jupyter_server >=2.4.0,<3
+    - jupyter_server >=2.19.0,<3
     - jupyter-builder >=${{ jupyter_builder_min }},<${{ jupyter_builder_max }}
     - jupyterlab >=${{ jupyterlab_min }},<${{ jupyterlab_max }}
     - jupyterlab_server >=2.28.0,<3
@@ -43,6 +43,17 @@ requirements:
     - tornado >=6.2.0
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/jupyter/jupyter_server_config.d/**
+        - share/applications/jupyter-notebook.desktop
+        - share/icons/hicolor/scalable/apps/notebook.svg
+        - share/jupyter/lab/schemas/@jupyter-notebook/**
+        - share/jupyter/labextensions/@jupyter-notebook/lab-extension/**
+      site_packages:
+        - notebook/**
+        - notebook-${{ version }}.dist-info/**
   - python:
       imports: notebook
       pip_check: true
